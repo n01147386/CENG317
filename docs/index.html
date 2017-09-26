@@ -111,920 +111,71 @@ media="only screen" />
 
 	
 <section id="Section_01W">
-<h2>Week 1(Winter)</h2>
-	<h3><i>Integration</i></h3>
-	<li><a href="README.pdf">README</a></li>
 
 
 
-<section id="Section_14">
-<h2>Week14</h2>
-	<h3><i>Build Instructions</i></h3>
-	<p><b></b></p><h4><b>Introduction</b></h4><br>
-		The goal of this project is to automatically capture license plate when a car is entering or
-		exiting the parking lot, after the the system read the license plate successfuly, it will send the
-		number to my database and open thegate to let the car in or out. this will be a hands-free parking lot. 
-		This system is connected to the database, and our user will be able to pay the parking fee on their 
-		smartphone with their own account.
-		The current progress of this project is to simulate how the parking lot gate works. This is
-		done with the ultrasonic sensor, motor driver and raspberry pi. The sensor will trigger the motor
-		to open the gate and turn on the green light if it detecte a car coming closer to the gate, and close 
-		the gate, turn on red light if there is no more object in front of the gate.
-	<p></p>
-	<p><b></b></p><h4><b>System Diagram</b></h4><br>
-	<p></p>
-		<p><iframe src="Hardware/ProjectDiagram.pdf" style="width:700px; height:1000px;" frameborder="0"></iframe></p>
-		<p><i>Figure 1: input-process-output diagram</i></p>		
-	<p><b></b></p><h4><b>Budget Report</b></h4><br>
-	<table>
-			<tbody>
-				<tr>
-				<th>Components</th>
-				<th>Quantity</th>
-				<th>Description</th>
-				<th>Supplier</th>
-				<th>Price with Tax and Shipping</th>
-				</tr>
-				
-				<tr>
-					<td>Raspberry Pi 2B</td>
-					<td>1</td>
-					<td>Model B with Case and Wireless Internet Stick</td>
-					<td>Amazon</td>
-					<td align="right">$44.99</td>
-				</tr>
-				
-				<tr>
-					<td>Raspberry Pi Power Supply</td>
-					<td>1</td>
-					<td>2.5A Micro USB Power Adapter</td>
-					<td>Amazon</td>
-					<td align="right">$13.95</td>
-				</tr>
-				
-				<tr>
-					<td>Ultrasonic Sensor</td>
-					<td>2</td>
-					<td>HC-SR04</td>
-					<td>Canada Robotix</td>
-					<td align="right">$14.95</td>
-				</tr>
-				
-				<tr>
-					<td>Camera Module V2</td>
-					<td>1</td>
-					<td>8 Megapixel, 1080p</td>
-					<td>Amazon</td>
-					<td align="right">$43.95</td>
-				</tr>
-				
-				<tr>
-					<td>Adapter</td>
-					<td>1</td>
-					<td>HDMI to VGA adapter</td>
-					<td>Creatron</td>
-					<td align="right">$21.99</td>
-				</tr>
-				
-				<tr>
-					<td>Batteries</td>
-					<td>4</td>
-					<td>AAA</td>
-					<td>Creatron</td>
-					<td align="right">$2.99</td>
-				</tr>
-				
-				<tr>
-					<td>Motor</td>
-					<td>1</td>
-					<td>Dc Motor</td>
-					<td>Canada Robotix</td>
-					<td align="right">$1.99</td>
-				</tr>
-				
-				<tr>
-					<td>Battery Holder</td>
-					<td>1</td>
-					<td>4 X AAA Battery Holder</td>
-					<td>Creatron</td>
-					<td align="right">$1.49</td>
-				</tr>
-				
-				<tr>
-					<td>Motor Driver</td>
-					<td>1</td>
-					<td>L293D Motor Driver</td>
-					<td>Creatron</td>
-					<td align="right">$6.00</td>
-				</tr>
-				
-								<tr>
-					<td>LED</td>
-					<td>1</td>
-					<td>Single Led(Red, Green)</td>
-					<td>Creatron</td>
-					<td align="right">1.50</td>
-				</tr>
-				
-								<tr>
-					<td>Ribbon Cable</td>
-					<td>1</td>
-					<td>Extension of GPIO Port on Raspberry Pi</td>
-					<td>Canada Robotix</td>
-					<td align="right">$5.99</td>
-				</tr>
-								<tr>
-					<td>Wires and Jumper Cable</td>
-					<td>10+</td>
-					<td>For Connection</td>
-					<td>Canada Robotix</td>
-					<td align="right">$3.99</td>
-				</tr>
-				
-					<tr>
-					<td>Full Sized BreadBoard</td>
-					<td>1</td>
-					<td>MB-102 Breadboard</td>
-					<td>Amazon</td>
-					<td align="right">$5.79</td>
-				</tr>
-				
-				<tr>
-					<td>Resistors</td>
-					<td>3</td>
-					<td>1kΩ, 2kΩ, 270Ω</td>
-					<td>N/A</td>
-					<td align="right">$0.00</td>
-				</tr>
-				
-				<tr>
-				<th>Total</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th align="right">$169.57</th>
-				</tr>				
-			</tbody>
-		</table>
-	<p><i>Table 1: budget of the project</i></p>	
-	<p><b></b></p><h4><b>Time Commitment</b></h4><br>
-		You will spend this amount of time finishing this project by this build guide.
-			<table>
-			<tbody>
-				<tr>
-				<th>Tasks</th>
-				<th>Time Required</th>
-				</tr>
-					
-				<tr>	
-				<td>Raspberry Pi 2B Boot Up, first time boot up requires at least 10 min</td>
-				<td align="right">20 mins</td>
-				</tr>
-				
-				<tr>
-				<td>PCB Soldering, printing PCB board will take 1 hour, soldring and testing could take more than 2 hours</td>
-				<td align="right">3 hours</td>
-				</tr>
-				
-				<tr>
-				<td>Project Wiring, connect sensors, leds and motor to raspberry pi</td>
-				<td align="right">1 hour +</td>
-				</tr>
-				
-				<tr>
-				<td>Importing python code</td>
-				<td align="right">5 mins</td>
-				</tr>
-				
-				<tr>
-				<td>Running code with your hardware connected</td>
-				<td align="right">5 mins</td>
-				</tr>
-				
-				<tr>
-				<td>Unit testing for unexpected error</td>
-				<td align="right">20 mins</td>
-				</tr>
-			
-				
-				<tr>
-				<th>Total Time Commitment</th>
-				<th align="right">1 Day</th>
-				</tr>
-			</tbody>
-		</table>
+<section id="Section_1">
+ <h2>Week 1</h2>
+ <header id="Header_Article_1">
+  <h3>Introduction to IoT Projects</h3>
+  <img src="images/NetworkArchitectureFall2017.jpg" alt="error">
+ </header>
 	
-	<p><i>Table 2: Time Required to finish this project</i></p>		
- 
- 	<b><h4>Mechanical Assembly</h4></b>
-	<p><b>Build Steps (Do every step separately)</b></p>
-	
-	<ol>
-	<p></p><li>Connect the Camera Module.</li><p></p>
-	<p><img src="/Hardware/connect_camera.jpg" alt="schema" style="width:100px height:300px">
-	</p><p><i>Figure 2: pi camera</i></p>
-		
-	<p></p><li>Using the diagram below as a reference to set up your led, you can connect the second led by the same resistor
-		and different port.</li><p></p>
-	<p><img src="/Hardware/led_test.jpg" alt="schema" style="width:100px height:300px">
-	</p><p><i>Figure 3: One LED on the 3.3v supply</i></p>		
-	
-	<p></p><li>Connect HCSR04 to raspberry, port number might be different.</li><p></p>
-	<p><img src="/Hardware/hcsr04.png" alt="schema" style="width:100px height:300px">
-	</p><p><i>Figure 4: pin layout for HCSR04</i></p>		
-	
-	<p></p><li>Set up dc motor with a motor driver.</li><p></p>
-	<p><img src="/Hardware/motor.png" alt="schema" style="width:100px height:300px">
-	</p><p><i>Figure 5: Attached the battery and the motor</i></p>		
-	</ol>
-	<li>Full Raspberry Pi pin connection</li>
-		<table>
-			  <tbody><tr>
-			    <th>Components</th>
-			    <th>Raspberry Pi GPIO Pin</th>
-			  </tr>
-			  <tr>
-			    <td>HCSR04 echo</td>
-			    <td align="right">24</td>
-			  </tr>
-			  <tr>
-			    <td>HCSR04 trig</td>
-			    <td align="right">23</td>
-			  </tr>
-			  <tr>
-			    <td>LED green</td>
-			    <td align="right">27</td>
-			  </tr>
-			  <tr>
-			    <td>LED red</td>
-			    <td align="right">17</td>
-			  </tr>
-			  <tr>
-			    <td>L293D Enable 1</td>
-			    <td align="right">25</td>
-			  </tr>
-			  <tr>
-			    <td>L293D Input 1</td>
-			    <td align="right">12</td>
-			  </tr>
-			  <tr>
-			    <td>L293D Input 2</td>
-			    <td align="right">16</td>
-			  </tr>
-			</tbody></table>
-	<p><i>Table 3: Mapping pins from sensors to Raspberry pi</i></p>		
-
-	<p><b>Complete build Video</b>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WNZFuf610sg" frameborder="0" allowfullscreen=""></iframe>
-	</p>
-	
-	
-	<p><b></b></p><h4><b>PCB/Soldering</b></h4><br>
-		<p> This project will operate with a PCB board, but right now I'm not using it. </p>
-	
-	<p><b></b></p><h4><b>Unit Testing</b></h4><br>
-		<p>For testing purpose you can use these codes for testing your Camera, led, Ultrasonic Sensor and motor
-		that you build from Build Steps section.</p>
-	
-		<p><b> Camera </b><br> 
-		<code></code></p><pre><code>		from picamera import PiCamera
-		from time import sleep
-
-		camera = PiCamera()
-
-		camera.start_preview()
-		sleep(5)
-		camera.stop_preview()
-		</code></pre><code>
-		</code>
-		<p></p>
-	
-		<p><b> led-blink </b><br> 
-		<code></code></p><pre><code>import RPi.GPIO as GPIO  
-import time  
-# blinking function  
-def blink(pin):  
-        GPIO.output(pin,GPIO.HIGH)  
-        time.sleep(1)  
-        GPIO.output(pin,GPIO.LOW)  
-        time.sleep(1)  
-        return  
-# to use Raspberry Pi board pin numbers
-GPIO.setmode(GPIO.BOARD)  
-# set up GPIO output channel  
-GPIO.setup(12, GPIO.OUT)
-GPIO.setwarnings(False)
-
-# blink GPIO17 50 times  
-for i in range(0,5):  
-        blink(12)  
-GPIO.cleanup() 
-		
-		</code></pre><code>
-		</code>
-		<p></p>
-	
-		<p><b> led-blink-2 </b><br> 
-		<code></code></p><pre><code>import RPi.GPIO as GPIO
-import time  
-
-GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)
-GPIO.setup(12,GPIO.OUT)
-try:
-    while True:
-        print "LED ON"
-        GPIO.output(12,GPIO.HIGH)
-        time.sleep(1)
-        print "LED OFF"
-        GPIO.output(12,GPIO.LOW)
-        time.sleep(1)
-
-except KeyboardInterrupt:
-    GPIO.cleanup()
-		</code></pre><code>
-		</code>
-		<p></p>
-	
-		<p><b> HCSR04 </b><br> 
-		<code></code></p><pre><code>import RPi.GPIO as GPIO
-import time
-GPIO.setmode(GPIO.BCM)
-
-TRIG = 23 
-ECHO = 24
-
-print "Distance Measurement In Progress"
-
-GPIO.setup(TRIG,GPIO.OUT)
-GPIO.setup(ECHO,GPIO.IN)
-
-GPIO.output(TRIG, False)
-print "Waiting For Sensor To Settle"
-time.sleep(2)
-
-GPIO.output(TRIG, True)
-time.sleep(0.00001)
-GPIO.output(TRIG, False)
-
-while GPIO.input(ECHO)==0:
-  pulse_start = time.time()
-
-while GPIO.input(ECHO)==1:
-  pulse_end = time.time()
-
-pulse_duration = pulse_end - pulse_start
-
-distance = pulse_duration * 17150
-
-distance = round(distance, 2)
-
-print "Distance:",distance,"cm"
-
-GPIO.cleanup()
-		</code></pre><code>
-		</code>
-		<p></p>	
-	
-		<p><b> DC Motor </b><br> 
-		<code></code></p><pre><code>import RPi.GPIO as GPIO
-from time import sleep
- 
-GPIO.setmode(GPIO.BOARD)
- 
-Motor1A = 16
-Motor1B = 18
-Motor1E = 22
- 
-GPIO.setup(Motor1A,GPIO.OUT)
-GPIO.setup(Motor1B,GPIO.OUT)
-GPIO.setup(Motor1E,GPIO.OUT)
- 
-print "Turning motor on"
-GPIO.output(Motor1A,GPIO.HIGH)
-GPIO.output(Motor1B,GPIO.LOW)
-GPIO.output(Motor1E,GPIO.HIGH)
- 
-sleep(2)
- 
-print "Stopping motor"
-GPIO.output(Motor1E,GPIO.LOW)
- 
-GPIO.cleanup()
-		</code></pre><code>
-		</code>
-		<p></p>		
-	
-	
-	<p><b></b></p><h4><b>Production Testing</b></h4><br>
-		<p>If all the parts you tested works fine, you can use this demo.py code and 
-			combine all the parts together using table 3 pin connection for production testing.(camera will
-			be included in next semester.)
-			
-					</p><p><b> Demo </b><br> 
-		<code></code></p><pre><code>#!/usr/bin/python
-# Author: Tony
-# Measure distance using an ultrasonic module
-# in a loop.
-# -----------------------
-# -----------------------
-# Import required Python libraries
-# -----------------------
-from __future__ import print_function
-from picamera import PiCamera
-from time import sleep
-import time
-import RPi.GPIO as GPIO
-
-#-----------Camera-------------
-#------LED------------------
-GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)
-GPIO.setup(11,GPIO.OUT)
-GPIO.setup(13,GPIO.OUT)
-#------DC_MOTOR-----------------
-
-Motor1E = 22
-Motor1B = 32
-Motor1A = 36
-GPIO.setup(Motor1A,GPIO.OUT)
-GPIO.setup(Motor1B,GPIO.OUT)
-GPIO.setup(Motor1E,GPIO.OUT)
-
-# blinking function  
-def blink(pin):  
-        GPIO.output(pin,GPIO.HIGH)  
-        time.sleep(0.1)  
-        GPIO.output(pin,GPIO.LOW)  
-        time.sleep(0.1)  
-        return 
-
-# -----------------------
-# Define some functions
-# -----------------------
-def measure():
-  # This function measures a distance
-  GPIO.output(GPIO_TRIGGER, True)
-  # Wait 10us
-  time.sleep(0.00001)
-  GPIO.output(GPIO_TRIGGER, False)
-  start = time.time()
-  
-  while GPIO.input(GPIO_ECHO)==0:
-    start = time.time()
-
-  while GPIO.input(GPIO_ECHO)==1:
-    stop = time.time()
-
-  elapsed = stop-start
-  distance = (elapsed * speedSound)/2
-
-  return distance
-
-def measure_average():
-  # This function takes 3 measurements and
-  # returns the average.
-
-  distance1=measure()
-  time.sleep(0.1)
-  distance2=measure()
-  time.sleep(0.1)
-  distance3=measure()
-  distance = distance1 + distance2 + distance3
-  distance = distance / 3
-  return distance
-
-# -----------------------
-# Main Script
-# -----------------------
-
-# Use BCM GPIO references
-# instead of physical pin number
-
-#------
-GPIO.setmode(GPIO.BOARD)
-
-# Define GPIO to use on Pi
-GPIO_TRIGGER = 16
-GPIO_ECHO    = 18
-
-# Speed of sound in cm/s at temperature
-temperature = 20
-speedSound = 33100 + (0.6*temperature)
-
-print("Ultrasonic Measurement")
-print("Speed of sound is",speedSound/100,"m/s at ",temperature,"deg")
-
-# Set pins as output and input
-GPIO.setup(GPIO_TRIGGER,GPIO.OUT)  # Trigger
-GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
-
-# Set trigger to False (Low)
-GPIO.output(GPIO_TRIGGER, False)
-
-# Allow module to settle
-time.sleep(0.5)
-
-# boolean
-checker = True
-#
-
-i = 0
-
-# Wrap main content in a try block so we can
-# catch the user pressing CTRL-C and run the
-# GPIO cleanup function. This will also prevent
-# the user seeing lots of unnecessary error
-
-# messages.
-
-try:
-  while True:
-    distance_now = measure_average()
-    if distance_now &lt;= 10 and i == 0:
-       print ("CAR DETECTED : {0:5.1f}".format(distance_now),"cm")
-       GPIO.output(11, GPIO.LOW)
-       GPIO.output(13, GPIO.HIGH)
-       print ("opening gate")
-       GPIO.output(Motor1A, GPIO.HIGH)
-       GPIO.output(Motor1B, GPIO.LOW)
-       GPIO.output(Motor1E, GPIO.HIGH)
-       sleep(0.05)
-       print ("motor off")
-       GPIO.output(Motor1E, GPIO.LOW)
-       i = 1
-
-       time.sleep(2)
-#       print ("closing gate")
-#       GPIO.output(Motor1A, GPIO.LOW)
-#       GPIO.output(Motor1B, GPIO.HIGH)
-#       GPIO.output(Motor1E, GPIO.HIGH)
-#       sleep(0.05)
-#       print ("motor off")
-#       GPIO.output(Motor1E, GPIO.LOW)
-    elif distance_now &lt;=10 and i &gt; 0:
-            GPIO.output(11, GPIO.LOW)
-            GPIO.output(13, GPIO.HIGH)
-            time.sleep(1)
-        
-    elif distance_now &gt;10 and i &gt; 0:
-            GPIO.output(11, GPIO.HIGH)
-            GPIO.output(13, GPIO.LOW)
-            print ("closing gate") 
-            GPIO.output(Motor1A, GPIO.LOW)
-            GPIO.output(Motor1B, GPIO.HIGH)
-            GPIO.output(Motor1E, GPIO.HIGH)
-            sleep(0.05)
-            print ("motor off")
-            GPIO.output(Motor1E, GPIO.LOW)
-            i = 0;
-    
-    else:
-        print("Distance : {0:5.1f}".format(distance_now),"cm")
-        GPIO.output(11, GPIO.HIGH)
-        GPIO.output(13, GPIO.LOW)        
-
-
-        
-#        time.sleep(1)
-    
-except KeyboardInterrupt:
-  # User pressed CTRL-C
-  # Reset GPIO settings
-  GPIO.output(11, GPIO.LOW)
-  GPIO.cleanup()
-		</code></pre><code>
-		</code>
-		<p></p>
-			
-	<p><b></b></p><h4><b>Reproducibility Based on Instructions</b></h4><br>
-		<p>By following these instructions anyone should be able to have the same working prototype at the end 
-	of these instructions as the one that I have. If you want see more information about the camera, you can check 
-	my group member Thomas' build blog --&gt;<a href="https://tc168.github.io/">Thomas</a></p>
-		
 </section>
-	
-<section id="Section_13">
-<h2>Week 13</h2>	
-	<p><b><a href="Hardware/HardwareWeek13Presentation.pptx">Presentation</a></b></p>
-	<li><a href="Hardware/CENG317ProjectProposalStudentName.docx">Project Proposal</a></li>
-	<li><a href="Hardware/Hardware Budget(Update_1).xlsx">Budget</a></li>
-	<li><a href="Hardware/Project1.mpp">Project Schedule</a></li>
-	<li><a href="https://www.youtube.com/watch?v=iCohWHqXRn8">Build Video</a></li>
+
+<section id="Section_2">
+  <h2>Week 2</h2>
+   <p></p><ul>
+    <li>PCB printing using Eagle</li>
+	<li>Project Proposal  (<a href="Hardware/CENG317ProjectProposalStudentName.docx">rubric</a>).</li>
+
+  </ul><p></p>
 </section>	
-	
-<section id="Section_12">	
- <h2>Week 12</h2>	
-	<p><b>Current Progress</b></p>
-	<p>Right now working on booting DC motor with a H-bridge motor driver <a href="http://www.ti.com/lit/ds/symlink/l293.pdf">L293D</a>. 
-		Connect Dc motor to Raspberry Pi by this stepper, and also need 4 X AAA for the power supply. Add a green LED light to
-		board. On the programming side, i am trying to trigger the Dc motor using ultrasonic sensor.</p>
-	<p><b>Problems</b></p>
-	<p>How to control the speed and angle of the Dc motor.<a href="https://business.tutsplus.com/tutorials/controlling-dc-motors-using-python-with-a-raspberry-pi--cms-20051">Useful Link</a></p>
-	<p><b>Solution for the question from previous week</b></p>
-	<p>By set up ultrasonic sensor and DC motor seperately, and then find the GPIO port for each one.</p>
-	<p><b>Financial Updates</b></p>
-	<p>As all the components is bought already, budget is under control, no need to Increase the budget.</p>
-	
-</section>
-	
-<section id="Section_11">
- <h2>Week 11</h2>	
-	<p><b> Progress Report</b>
-		</p><li>50 percent finished.</li>
-		<li>Add new feature to our project. After triggering LED by ultrasonic sensor, I connected a DC motor to pi to 
-		simulate gate open and close.
-	 <a href="https://learn.adafruit.com/adafruit-raspberry-pi-lesson-9-controlling-a-dc-motor/overview">Useful link</a></li>
-	<p></p>
-	
-	<p><b> Issues</b>
-		</p><li>GPS signal is very weak indoor.</li>
-		<li>DC motor, ultrasonic sensor, GPS, LED. Might have conflict by using the same port.</li>		
-	<p></p>
-	
-	<p><b> Solutions</b>
-		</p><li>External Active <a href="https://www.adafruit.com/products/960">Antenna</a> might be helpful to get strong signal for gps.	
-	 </li>		
-		<p></p>
-	
-	<p><b> Financial Report</b>
-		</p><li>Bought a 4 X battery holder($1) and 4 X AA battery($2).</li>
-		<li>L293D(Stepper for motor) arriving soon and budget is under control.</li>
-		<p></p>
-	
-	<p><b> Open House Report</b>
-	</p><h4>Need improvement on programming side</h4>
-	<li>Automatic start program when raspberry pi boot up.</li>
-	<li>Bug fixing. After long time running, the program lost function.</li>
-	<p></p>
-</section>
-	
-	
-<section id="Section_10">
- <h2>Week 10</h2>
-  <p>
-	</p><li>Aquiring New Part For the Project</li>
-	    <a href="http://www.canadarobotix.com/gps/adafruit-ultimate-gps-breakout-v3-66-channel-w-10-hz-updates">Ultimate GPS Breakout v3</a>
-	    <a href="http://www.canadarobotix.com/serial-ttl/1746-usb-to-uart-ttl-serial-cable-pl2303hx">USB to UART TTL Serial Cable</a>
-	<li>Raspberry Pi working with the GPS</li>
-	    <a href="http://community.wolfram.com/groups/-/m/t/157461">Link of the GPS tutorial</a>	
-  	<li>Have sone issues with raspberrypi on board camera. Camera boot up failed, not recognizing the camera. </li> <p></p>
-	<p><b>Accomplishment</b>
-  	</p><li>I Set up the HC-SR04 with Raspberry Pi to mesure the distance.</li>
-	<a href="https://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi/"> HC-SR04 Tutorial</a>
-		<a https:="" www.raspberrypi.org="" documentation="" linux="" usage="" rc-local.md="">Run program when the Pi boots</a><p></p>
-	<li>After buying the GPS module, budget still under control (within $170).</li> 
-	<li>Team members are working on the camera.</li>	  
-	  
- </section>	
-	
-	
-<section id="Section_9">
- <h2>Week 9</h2>
-  <p>
-	</p><li>Build Video 30"</li>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iCohWHqXRn8" frameborder="0" allowfullscreen=""></iframe>  <p></p>
- </section>
-	
-	
-<section id="Section_8">
- <h2>Week 8</h2>
+
+
+
+<section id="Section_3">
+  <h2>Week 3</h2>
   <p>
    </p><ul>
-	<li>Placard of Our Smart Parking Project.</li>
-	   <li>Download the publisher file here -&gt;  (<a href="Hardware/Placard.pub">click me</a>).</li>	   
-	 <img src="Hardware/Placard.jpg " alt="error">	   
-   </ul>
-  <p></p>
- </section>	
-	
-<section id="Section_7">
- <h2>Week 7</h2>
-  <p>
-   </p><ul>
-	<li>The power up milestone finished</li>
-	   <img src="Hardware/week701.jpg" alt="error">
-	    <img src="Hardware/week702.jpg" alt="error">
-	    <img src="Hardware/week703.jpg" alt="error">
-   </ul>
-  <p></p>
- </section>
-	
-	
-	
-<section id="Section_6">
- <h2>Week 6</h2>
-  <p>
-   </p><ul>
-	 <li>This a very early version of assembling my parts</li>
-	 <img src="Hardware/phase0.01ams.JPG " alt="error">
-	  	 <li>Almost all the parts are ready to assembling and soldering. However, right now I'm still focusing on the soldering the PCB.
-	   </li>  
-	 <li>Before next Wednesday(Oct/19/2016), I will be finished soldering, and I will keep updating more information </li>   
-	   <li>Financial Status is on track.</li>	   
-	   <li><b>Update</b>: Board Soldering finished. See week 7.</li>
-   </ul>
-  <p></p>
- </section>	
-	
-<section id="Section_5">
- <h2>Week 5</h2>
-	  <h3>Showing acquisitions</h3>
-  <p>
-   </p><ul>
-	  <li><b>Got all the pieces of equipment we need</b></li>
- 	 <img src="Hardware/Parts1.JPG" alt="error">
+	   <li>Project Schedule -&gt;  (<a href="Hardware/Project1.mpp">rubric</a>).</li>
+	   <li>Budget Due Next Week</li>
 
    </ul>
   <p></p>
- </section>
-	
-	
-	
+</section>
+
+
+
 	
 <section id="Section_4">
  <h2>Week 4</h2>
   <p>
    </p><ul>
 	   <li>Budget Finished -&gt; (<a href="Hardware/Hardware Budget.xlsx">rubric</a>).</li>
-<!--     <li>Start off by watching some soldering <a href="http://www.youtube.com/watch?v=BLfXXRfRIzY&list=PLQ32vZrF5U2lFOJTtZDytBWBYVLNp4RYz">videos</a>.</li>
-	<li>Project Proposal Due (<a href="weeks/Week2ProjectProposalRubric.xml">rubric</a>), hand in your hardcopy of a completed/modified template including the methodology and the respective table. Please also make a decision regarding the following 2 forms and submit with your respective answers: <a href="http://humber.ca/brand/sites/default/files/Photo%20Consent%20Form_rev29Jan2016.pdf">photo consent</a> (mostly for open house and videos) and <a href="http://www.humber.ca/brand/sites/default/files/Humber%20STUDENT%20WORKS%20Consent%20July2014_FIN.pdf">project consent</a> (though you cover this one mostly through the licensing you choose for your repository).</li>
-	<li>Parts Kit. Safety including safety glasses.</li>
-	<li><a href="http://radiojove.gsfc.nasa.gov/telescope/soldering.htm">NASA Jove Project.</a>
-	<li>Use <a 
-href="http://www.cadsoftusa.com/download-eagle/">Eagle</a> with the freeware license to change Simon’s name to your own name on the Printed Circuit Board files available at <a 
-href="http://github.com/vladporcila/ModularSenseHatStripped">http://github.com/vladporcila/ModularSenseHatStripped</a> for the sensor hat and get your PCB laser etched in J206 with help from Kelly and/or Vlad their email address is prototypelab_at_humber.ca.
-    Please take a look at using the <a href="http://learn.sparkfun.com/tutorials/using-eagle-board-layout/generating-gerbers">Sparkfun Cam file</a>.</li>
-    <li>Microsoft Product discussion, MS Project critical path and dependencies are due Week 3 (<a href="weeks/Week3RubricforProjectSchedule.xml">rubric</a>).</li> -->
+
    </ul>
   <p></p>
- </section>
+</section>
  
- <section id="Section_3">
-  <h2>Week 3</h2>
-  <p>
-   </p><ul>
-	   <li>Project Schedule -&gt;  (<a href="Hardware/Project1.mpp">rubric</a>).</li>
-	   <li>Budget Due Next Week</li>
-<!--     <li>Start off by logging into a computer and during the log in process identify ten of the pieces of Tech in the <a href="weeks/CENGprojectbox.jpg">clear project box</a> (this is an individual <a href="weeks/CENG317TechIdentificationQuiz.docx">quiz</a> to be done without communicating with others).</li>
-	<li>The clear box represents the maximum size of your project which is in alignment with the space below the tray in your parts kit, you are expected to bring both along with safety glasses every week.</li>
-	<li>If your computer has booted:</li>
-	<ol>
-	 <li>Please install <a href="http://desktop.github.com/">http://desktop.github.com/</a></li>
-	 <li>Create an account on <a href="http://github.com/join?source=header-home">GitHub.</a>
-	  <ol>
-	   <li>Select a Username for yourself at GitHub.</li>
-	   <li>Enter an email address.</li>
-	   <li>Choose a new, unique password for GitHub and record it.</li>
-	   <li>Read the Terms of Service.</li>
-	   <li>Read the Privacy Policy.</li>
-	   <li>Decide whether you would like to agree or whether you would like to ask for alternate arrangements.</li>
-	   <li>Click on create an account or ask for an alternate arrangement.</li>
-	   <li>If you created an account, and are comfortable with public choose Free plan (no private repositories).</li>
-	   <li>Regarding programming experience, usage plans, and descriptions, note that you have the option to skip this step.
-	   <li>Start a project.</li>
-	   <li>Verify your email address.</li>
-	   <li>Create a new repository with the Repository name Username.github.io</li>
-	   <li>The Description is optional.</li>
-	   <li>Select Initialize this repository with a README.</li>
-	   <li>Add .gitignore for C.</li>
-	   <li>Add a license: GNU Affero General Public License v3.0.</li>
-	   <li>Create repository.</li>
-      </ol>
-	 <li>Clone <a href="http://github.com/six0four/six0four.github.io">http://github.com/six0four/six0four.github.io</a> (<a href="http://joe.blog.freemansoft.com/2014/04/github-clone-to-desktop-with-windows.html">helpful link</a>)</li>
-	 <li>Add the index.html, indexmenu.html, and indexcontent.html from <a href="http://github.com/six0four/six0four.github.io">http://github.com/six0four/six0four.github.io</a> to your repository.
-	 <li>Open Username.github.io with a web browser (Note that there are currently some template issues and you may need to go to Username.github.io/indexcontent.html instead).
-	</ol>
-    <li>Welcome to your IoT themed hardware projects. Let's get started with some <a href="http://www.youtube.com/watch?v=kM-DXWEns2Y&t=28s">reflective learning.</a></li>
-    <li>Project Proposal <a href="weeks/CENG317ProjectProposalStudentName.docx">template</a></li>
-    <li>2016 project choices (show placards from previous projects):</li>
-	<li>Existing Industry Partner</li>
-	<li>1. <a href="http://www.crystalfountains.com">Synchronized Fountain Display</a></li>
-	<li>2. Industry 4.0, OPCUA</li>
-	<li>Humber Automation/Mechatronics Program</li>
-	<li>3. PoE Automation cell monitor</li>
-	<li>Humber Green House</li>
-	<li>4. <a href="http://farmbot.io">FarmBot</a></li>
-	<li>Kortright Centre</li>
-	<li>5. Home Automation <a 
-href="http://www.thestar.com/life/homes/2016/06/04/active-house-design-gets-a-real-life-test-drive.html">http://www.thestar.com/life/homes/2016/06/04/active-house-design-gets-a-real-life-test-drive.html</a></li>
-	<li>6. Insulation multiplexed grid of sensors</li>
-	<li>7. Remote sensors <a 
-href="http://sowc.ca/facilities/data-platform/">http://sowc.ca/facilities/data-platform/</a></li>
-	<li>Humber Sustainable Technology Program</li>
-	<li>8. Solar Panel interactive display</li>
-	<li>Humber Sustainability/Arboretum</li>
-	<li>9. Langstroth Bee tracker</li>
-	<li>Future Humber Quadcopter Swarm</li>
-	<li>10. <a 
-href="http://www.bestbuy.ca/en-CA/product/litehawk-litehawk-high-roller-mini-rc-multi-rotor-air-vehicle-red-31406/10361895.aspx">http://www.bestbuy.ca/en-CA/product/litehawk-litehawk-high-roller-mini-rc-multi-rotor-air-vehicle-red-31406/10361895.aspx</a>
-<a 
-href="http://dzlsevilgeniuslair.blogspot.ca/2013/11/more-toy-quadcopter-hacking.html">http://dzlsevilgeniuslair.blogspot.ca/2013/11/more-toy-quadcopter-hacking.html</a></li>
-	<li>Humber Engineering Technology Parts Crib</li>
-	<li>11. Parts Crib database</li>
-	<li>Humber Public Safety</li>
-	<li>12. Parking Lot combining features seen at Yorkdale and Sherway Gardens</li>
-	<li>Humber School of Media Studies</li>
-	<li>13. Voice recognition, akin to Amazon Alexa</li>
-	<li>Humber Wireless Program</li>
-	<li>14. Wifi Bridge, reporting up time</li>
-	<li>15. IPenbaled8USB-PsdU for cluster</li>
-	<li>Humber HRT</li>
-	<li>16. Health and Wellness: <a href="http://library.humber.ca/collections/islandora/object/islandora%3A247">gO2: Oxygen Therapy Rehabilitation Device thesis example</a></li>
-	<li>In the spirit of Entrepreneurpship:</li>
-	<li>17. Propose a project meeting CENG 317 and CENG 319 requirements</li>
-    <li><a 
-href="http://munro.humber.ca/~mdrk0011/projects/cribpi.php">Getting 
-started with a single board microcomputer, comprised of a 900MHz quad-core ARM Cortex-A7 CPU  with 1GB SDRAM, 10/100 Mbit/s 
-Ethernet, GPIO, UART, I²C bus, SPI bus, and 8 GB of Secure Digital storage from the Humber College Institute of 
-Technology & Advanced Learning North Campus Technology Parts 
-Crib</a></li>
-	<li>Electives schedules.</li> -->
-   </ul>
-  <p></p>
- </section>
+
  
- <section id="Section_2">
-  <h2>Week 2</h2>
-   <p></p><ul>
-    <li>PCB printing using Eagle</li>
-	<li>Project Proposal  (<a href="Hardware/CENG317ProjectProposalStudentName.docx">rubric</a>).</li>
-<!-- 	<li>Kits of sensor hat parts should be available in J206 (hours posted outside the door) to get started before the term starts if you like.</li>
-	<li>Here are some videos on soldering: <a 
-href="http://www.youtube.com/watch?v=BLfXXRfRIzY&list=PLQ32vZrF5U2lFOJTtZDytBWBYVLNp4RYz">http://www.youtube.com/watch?v=BLfXXRfRIzY&list=PLQ32vZrF5U2lFOJTtZDytBWBYVLNp4RYz</a> be sure to get Kelly and Vlad’s input on how to solder safely in J206.</li>
-	<li>I have my Pi 3 in this case <a href="http://www.canakit.com/raspberry-pi-black-case.html">http://www.canakit.com/raspberry-pi-black-case.html</a> and we bought USB network adaptors from Tiger Direct. Note that USB webcams are more economical and robust than pi specific ones. Paul Moggach's Raspberry Pi Technical Notes which give some idea of how to use the network adaptor and more extensive programming examples, than the simple program that should blink the (red-green) LED that I emailed, are available via login at: <a 
-href="http://mywiki.humber.ca/display/~n01018544/Technical+Notes">http://mywiki.humber.ca/display/~n01018544/Technical+Notes</a></li>
-	<li>There is also a guide to buying a Raspberry Pi as part of <a href="http://www.lynda.com/Raspberry-Pi-tutorials/Up-Running-Raspberry-Pi/191267-2.html">http://www.lynda.com/Raspberry-Pi-tutorials/Up-Running-Raspberry-Pi/191267-2.html</a></li>
-	<li>Humber students/staff/faculty/Admin now have full access to Lynda.com. Access 1000's of online videos ranging from Business, Creative and Technology topics.<ol>
-	<li>Visit lynda.com website</li>
-	<li>Click 'Sign In' button</li>
-	<li>Click Organization Login tab (NOT Individual Login)</li>
-	<li>Enter 'www.humber.ca' under organization's URL</li>
-	<li>Click 'Go' and you will be redirected to login.humber.ca</li>
-	<li>Enter your Humber username and password and click 'LOGIN' button</li>
-	<li>You will be redirected back to Lynda.com with full course access to create your own user name.</ol></li>
-	<li>Required course materials includes Humber North Campus Electronics Parts kit and safety glasses.</li> -->
-  </ul><p></p>
- </section>	
+
 
 	
 	
 	
-<section id="Section_1">
- <h2>Week 1</h2>
- <header id="Header_Article_1">
-  <h3>Building IoT Projects</h3>
-  <img src="Hardware/IMG_1927.JPG" alt="error">
-  <img src="Hardware/raspberrypiBlk.jpg" alt="error">
- </header>
-	
- </section>
+
 
 
 
  
- <section id="Section_02">
-  <h3>Future Hardware Weeks</h3>
-  <p></p><ul>
-   <li>Week 2 Project Proposal Due. Parts Kit. Safety including safety glasses. Class content: <a href="http://radiojove.gsfc.nasa.gov/telescope/soldering.htm">NASA Jove Project.</a> <a href="http://www.cadsoftusa.com/download-eagle/">Eagle.</a> Microsoft Products, MS Project critical path and dependencies.</li>
-   <li>Week 3 Project Schedule Due</li>
-   <li>Week 4 Budget Due</li>
-   <li>Week 5 Progress Report Due (including proof of order)</li>
-   <li>Week 6 Progress Report Due</li>
-   <li>Week 7 PCB Due</li>
-   <li>Week 8 Placard Due</li>
-   <li>Week 9 Progress Report Due</li>
-   <li>Week 10 Progress Report Due</li>
-   <li>Week 11 Progress Report Due</li>
-   <li>Week 12 Progress Report Due</li>
-   <li>Week 13 Presentation Due</li>
-   <li>Week 14 Build Instructions Due</li>
-   <li>Week 15 30 Second Script Due</li>
-   <li><a href="http://www.openscad.org/downloads.html">http://www.openscad.org/downloads.html</a></li>
-   <li><a href="http://www.w3schools.com/html/html_lists.asp">http://www.w3schools.com/html/html_lists.asp</a></li>
-  </ul><p></p>
- </section>
+ 
 
- <section id="Section_01">
-  <h3>Integration Weeks</h3>
-  <p></p><ol>
-   <li>Introduction</li>
-   <li>Software Requirements Specification</li>
-   <li>Declaration of Authorship</li> 
-   <li>References: APA format</li>
-   <li>Open House</li>
-   <li>Presentations</li>
-  </ol><p></p>
- </section>
+
   
- <section id="Section_00">
-  <h3>Past Projects</h3>
-  <p></p><ul>
-    <li><a href="http://munro.humber.ca/~mdrk0011/projects/">http://munro.humber.ca/~mdrk0011/projects/</a></li>
-  </ul><p></p>
- </section>
+</article>
 
-</section></article>
 </div>
 
                 </div>
@@ -1041,26 +192,12 @@ href="http://mywiki.humber.ca/display/~n01018544/Technical+Notes">http://mywiki.
 
 <div>                <nav>
                         <ul>  
-                          <li><a href="http://github.com/bigbosstony/bigbosstony.github.io/">Repository</a></li>
-                          <li><a href="#Section_01W">Week 1(Winter)</a></li>                                                    
-                          <li><a href="#Section_14">Week 14</a></li>                          
-                          <li><a href="#Section_13">Week 13</a></li>
-                          <li><a href="#Section_12">Week 12</a></li>                          
-                          <li><a href="#Section_11">Week 11</a></li>
-                          <li><a href="#Section_10">Week 10</a></li>
-                          <li><a href="#Section_9">Week 9</a></li>
-                                                      <li><a href="#Section_8">Week 8</a></li>
-                                                     <li><a href="#Section_7">Week 7</a></li>
-                                                     <li><a href="#Section_6">Week 6</a></li>
-                                                     <li><a href="#Section_5">Week 5</a></li>                          
-                                                     <li><a href="#Section_4">Week 4</a></li>                                                  
-                                                     <li><a href="#Section_3">Week 3</a></li>                     
-                                <li><a href="#Section_2">Week 2</a></li>
-                                <li><a href="#Section_1">Week 1</a></li>
-                                <li><a href="#Section_02">Future Hardware Weeks</a></li>
-                                <li><a href="#Section_01">Integration Weeks</a></li>
-                                <li><a href="#Section_00">Past Projects</a></li>
-                                <li><a href="http://six0four.github.io/">......</a></li>
+                          
+                                <li><a href="#Section_1">Week 1</a></li>                                                  
+                                <li><a href="#Section_2">Week 2</a></li>                     
+                                <li><a href="#Section_3">Week 3</a></li>
+                                <li><a href="#Section_4">Week 4</a></li>
+                                <li><a href="https://six0four.github.io/StudentSenseHat/">Course Website</a></li>
                           
                         </ul>
                 </nav>
@@ -1132,7 +269,7 @@ href="http://mywiki.humber.ca/display/~n01018544/Technical+Notes">http://mywiki.
    <div class="region region-footer"><div class="region-inner clearfix">
    <div id="block-panels-mini-footer" class="block block-panels-mini no-title">  
   
-
+  <div class="block-content content">
   <div class="panel-row row-1 clearfix">
     <div class="region region-four-first">
       <div class="region-inner clearfix">
@@ -1144,7 +281,47 @@ href="http://mywiki.humber.ca/display/~n01018544/Technical+Notes">http://mywiki.
 
 
     
-  
+    
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="region region-four-second">
+      <div class="region-inner clearfix">
+        <div class="panel-pane pane-menu-tree pane-menu-audience no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+
+
+    
+    
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-row row-2 clearfix">
+    <div class="region region-four-third">
+      <div class="region-inner clearfix">
+        <div class="panel-pane pane-menu-tree pane-user-menu no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+
+
+    
+    
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="region region-four-fourth">
+      <div class="region-inner clearfix">
+        <div class="panel-pane pane-block pane-block-1 no-title block">
+  <div class="block-inner clearfix">
     
             
     
@@ -1172,11 +349,9 @@ href="http://mywiki.humber.ca/display/~n01018544/Technical+Notes">http://mywiki.
 </div>
   </div><nav id="block-menu-menu-footer" class="block block-menu no-title" role="navigation"><div class="block-inner clearfix">  
   
-  <div class="block-content content"><ul class="menu clearfix"><li class="first leaf menu-depth-1 menu-item-661"><a href="http://www.humber.ca/privacy-policy">Privacy 
-Policy</a></li><li class="leaf menu-depth-1 menu-item-2183"><a href="http://www.humber.ca/terms-use">Terms of Use</a></li><li class="leaf menu-depth-1 menu-item-2487"><a href="http://www.humber.ca/knowthecode/">Code of Student Conduct</a></li><li class="last leaf menu-depth-1 menu-item-1993"><a href="http://www.humber.ca/contact-us/request-alternate-format" title="Alternate Format Request Form">Request Alternate Format</a></li></ul></div>
-  </div></nav><div id="block-humber-common-humber-copyright" class="block block-humber-common no-title"><div class="block-inner clearfix">  
+ 
   
-  <div class="block-content content"><span>©2017 Humber College</span></div>
+  <div class="block-content content" style="align="center""><span>©2017 Humber College</span></div>
   </div></div></div></div>  </footer>
 
 </div>
